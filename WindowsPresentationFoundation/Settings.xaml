@@ -1,0 +1,46 @@
+﻿<Window x:Class="WindowsPresentationFoundation.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsPresentationFoundation"
+        xmlns:lang="clr-namespace:WindowsPresentationFoundation.Translate"
+        mc:Ignorable="d"
+        Title="{x:Static lang:Language.settings}" Height="320" Width="550" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Content="{x:Static lang:Language.competitionSelection}" Grid.Row="1" Grid.Column="1" FontWeight="Bold"/>
+        <RadioButton Content="{x:Static lang:Language.men_s}" x:Name="rbMale" IsChecked="True" Grid.Row="1" Grid.Column="2" Margin="5" GroupName="sex"/>
+        <RadioButton Content="{x:Static lang:Language.women_s}" x:Name="rbFemale" Grid.Row="1" Grid.Column="2" Margin="100 5 5 5" GroupName="sex"/>
+
+        <Label Content="{x:Static lang:Language.languageSelection}" Grid.Row="2" Grid.Column="1" FontWeight="Bold"/>
+        <RadioButton Content="{x:Static lang:Language.english}" x:Name="rbEN" IsChecked="True" Grid.Row="2" Grid.Column="2" Margin="5" GroupName="lang"/>
+        <RadioButton Content="{x:Static lang:Language.croatian}" x:Name="rbHR" Grid.Row="2" Grid.Column="2" Margin="100 5 5 5" GroupName="lang"/>
+
+        <Label Content="{x:Static lang:Language.resolutionSelection}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <RadioButton Content="{x:Static lang:Language.fullScreen}"  x:Name="rbFull" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" GroupName="reso"/>
+        <RadioButton x:Name="rb1080" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="90 5 5 5" GroupName="reso">1920x1080</RadioButton>
+        <RadioButton x:Name="rb720" IsChecked="True" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="180,5,5,5" GroupName="reso">1280x720</RadioButton>
+        <RadioButton x:Name="rb900" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="270,5,5,5" GroupName="reso">1200x900</RadioButton>
+
+        <Button Content="{x:Static lang:Language.save}" x:Name="btnSave" Click="btnSave_Click" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

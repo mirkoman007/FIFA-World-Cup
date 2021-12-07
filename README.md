@@ -13,11 +13,22 @@ Responsible for:
 - read data from text files
 
 ## Windows Forms app
+Features:
+- choose your favorite teams and three players
+- upload and delete a player image
+- ranking list (most goals scored, most yellow cards, most visitors)
+- print a ranking list
+- settings (competition and language selection)
 
 ![preview image](/preview.png)
 ![preview image](/preview1.png)
 
 ## Windows Presentation Foundation (WPF) app
+Features:
+- team selection
+- lineups (formation, player names and number)
+- click on player to get details with animation (position, goals scored, yellow cards, is captain?)
+- settings (competition, language and resolution selection)
 
 ![preview image](/preview2.png)
 ![preview image](/preview3.png)
